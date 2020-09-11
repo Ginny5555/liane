@@ -1,0 +1,127 @@
+// IMPORT SECTION
+
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+
+// USER VARIABLES SECTION
+$bkcolor: #fafafa;
+$accent: none; // Accent Color
+$main-color: #7b7b7b;
+$fontsize: 14px; // Body Font Size
+$textcolor: #000; // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$roboto: Roboto, sans-serif; // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+
+$grid-gutter-width: 20px;
+$gutter: $grid-gutter-width;
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    font-display: swap;
+    src: local($fname), url($furl) format("woff2");
+  }
+}
+@mixin border {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+@mixin flex {
+  display: inline-flex;
+  justify-content: space-between;
+}
+@mixin flex-column {
+  display: inline-flex;
+  flex-direction: column;
+}
+@mixin text {
+  color: $main-color;
+  text-decoration: none;
+  list-style-type: none;
+}
+@include font("Roboto", normal, 400, "../fonts/roboto-regular-webfont.woff2");
+@include font("Roboto", italic, 400, "../fonts/roboto-italic-webfont.woff2");
+@include font("Roboto", normal, 700, "../fonts/roboto-bold-webfont.woff2");
+@include font(
+  "Roboto",
+  italic,
+  700,
+  "../fonts/roboto-bolditalic-webfont.woff2"
+);
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fafafa;
+}
+
+input,
+textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+body {
+  font-family: $roboto;
+  font-size: $fontsize;
+  text-transform: uppercase;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 300;
+    color: white;
+    margin: 0 auto;
+
+    background: $textcolor;
+  }
+  h2 {
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 6px;
+    font-size: 30px;
+  }
+  h3 {
+    color: $textcolor;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin: 0;
+  }
+  h4 {
+    color: $main-color;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: initial;
+    margin: 0;
+  }
+  p {
+    text-transform: initial;
+    color: $main-color;
+    font-weight: 500;
+    text-align: left;
+    line-height: 2.5;
+    padding-top: 20px;
+  }
+}
