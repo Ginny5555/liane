@@ -20,7 +20,26 @@ $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
 
 // FONTS LOAD SECTION
-
+@media screen and (min-width: 320px) {
+  .wrapper {
+    width: 1370px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .wrapper {
+    width: 4000px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 1800px;
+  }
+}
+@media screen and (min-width: 414px) {
+  .wrapper {
+    width: 1414px;
+  }
+}
 @mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
     font-family: $fname;
@@ -83,7 +102,7 @@ body {
   font-family: $roboto;
   font-size: $fontsize;
   text-transform: uppercase;
-  min-width: 320px;
+
   position: relative;
   line-height: 1.65;
 
