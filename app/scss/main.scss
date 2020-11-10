@@ -6,6 +6,8 @@ body {
   color: $textcolor;
   font-size: $fontsize;
 
+  margin: 0 auto !important;
+
   .main {
     width: 100%;
     margin: 0px auto;
@@ -42,7 +44,7 @@ body {
   }
 
   .container {
-    max-width: 1127px;
+    width: 95%;
     margin: 0 auto;
   }
   .tab {
@@ -67,7 +69,6 @@ body {
   .wrapper {
     background-color: $bkcolor;
     position: relative;
-    box-shadow: 10px 1px 10px 1px rgba(0, 0, 0, 0.1);
   }
   .navtab {
     @include flex;
@@ -438,7 +439,9 @@ body {
     &__tagline {
       @include flex-column;
       justify-content: center;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
+      margin-left: 30px;
+      width: 50%;
       & h1 {
         padding: 0px 22px 0px 22px;
       }

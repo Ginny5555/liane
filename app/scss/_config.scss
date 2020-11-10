@@ -22,22 +22,63 @@ $gutter: $grid-gutter-width;
 // FONTS LOAD SECTION
 @media screen and (min-width: 320px) {
   .wrapper {
-    width: 1370px;
+    width: 1279px !important;
+  }
+
+  body {
+    width: 1250px !important;
   }
 }
 @media screen and (min-width: 2000px) {
   .wrapper {
-    width: 4000px;
+    width: 2800px !important;
+    margin: 0 auto !important;
+  }
+  body {
+    width: 1000% !important;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .wrapper {
-    width: 1800px;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .navtab {
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 48px;
+  }
+  p {
+    font-size: 28px;
+  }
+  .main-button {
+    font-size: 45px !important;
+  }
+
+  .tab {
+    text-align: left;
+  }
+  .header-nav {
+    margin: 40px auto;
+    height: 300px;
+    flex-direction: row-reverse;
+    &__logo {
+      & img {
+        width: 300px;
+      }
+    }
   }
 }
 @media screen and (min-width: 414px) {
   .wrapper {
-    width: 1414px;
+    width: 1230px !important;
+    margin: 0 auto;
+  }
+
+  body {
+    width: 1290px !important;
   }
 }
 @mixin font($fname, $fstyle, $fweight, $furl) {
@@ -107,7 +148,7 @@ body {
   line-height: 1.65;
 
   h1 {
-    font-size: 48px;
+    font-size: 45px;
     font-weight: 300;
     color: white;
     margin: 0 auto;
