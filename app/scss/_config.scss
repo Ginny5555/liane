@@ -35,10 +35,36 @@ $gutter: $grid-gutter-width;
     margin: 0 auto !important;
   }
   body {
-    width: 1000% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 }
 @media screen and (max-width: 768px) {
+  .content-img {
+    flex-direction: column;
+  }
+  .box-contact {
+    text-align: center;
+  }
+  .content-team {
+    align-items: center;
+  }
+  .content-img__line {
+    width: 50%;
+    margin: auto;
+  }
+
+  .content-img__contact {
+    width: 100% !important;
+    text-align: center !important;
+    & p {
+      font-size: 32px !important;
+      text-align: center !important;
+    }
+  }
+  .buttons__menu {
+    width: 40% !important;
+  }
   .wrapper {
     width: 100% !important;
     margin: 0 auto !important;
@@ -46,12 +72,27 @@ $gutter: $grid-gutter-width;
   .navtab {
     flex-direction: column;
   }
-
+  h1 {
+    font-size: 54px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-size: 36px !important;
+  }
+  .heading__tagline {
+    width: 100% !important;
+  }
   a {
     font-size: 48px;
   }
   p {
-    font-size: 28px;
+    font-size: 32px !important;
+  }
+
+  h4 {
+    font-size: 36px !important;
+    padding: 20px !important;
   }
   .main-button {
     font-size: 45px !important;
@@ -62,7 +103,7 @@ $gutter: $grid-gutter-width;
   }
   .header-nav {
     margin: 40px auto;
-    height: 300px;
+
     flex-direction: row-reverse;
     &__logo {
       & img {
