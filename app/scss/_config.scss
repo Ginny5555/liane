@@ -40,6 +40,9 @@ $gutter: $grid-gutter-width;
   }
 }
 @media screen and (max-width: 768px) {
+  .footer-social {
+    height: fit-content !important;
+  }
   .content-img {
     flex-direction: column;
   }
